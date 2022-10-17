@@ -1,8 +1,8 @@
-# Дан массив связей пользователей. Вам необходимо реализовать функцию,
-# которая принимает на вход три аргумента: информация о связях, как кортеж (tuple)
-# кортежей, первое имя (str), второе имя (str). Функция должна возвращать True, если
-# связь между любыми двумя заданными пользователями существует, например, если у
-# двух пользователей есть общие друзья или у их друзей есть общие друзья и т.д., иначе
+# Given an array of user connections. You need to implement a function,
+# which takes three arguments as input: link information, as a tuple
+# tuples, first name (str), second name (str). The function should return True if
+# a relationship exists between any two given users, for example, if
+# two users have friends in common or their friends have friends in common, etc. otherwise
 # False.
 
 
@@ -32,4 +32,4 @@ if __name__ == '__main__':
         ("Стёпа", "Оля"), ("Оля", "Настя"),
         ("Настя", "Дима"), ("Дима", "Маша"),
     )
-    print(check_relation(net, 'Ваня', 'Дима'))
+    assert check_relation(net, 'Петя', 'Стёпа') is True
